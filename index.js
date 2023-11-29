@@ -1,8 +1,8 @@
 'use strict'
 
-var formidable = require('formidable')
+import { formidable } from 'formidable';
 
-module.exports = function (opt) {
+export default function (opt) {
     return async function (ctx, next) {
         const form = formidable({})
         for (const key in opt) {
