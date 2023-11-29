@@ -1,0 +1,24 @@
+{
+  "name": "koa2-formidable-v3",
+  "version": "1.0.0",
+  "description": "koa2 middleware for formidable",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lsp27/koa2-formidableV3"
+  },
+  "keywords": [
+    "formidable",
+    "koa2"
+  ],
+  "dependencies": {
+    "formidable": "3.5.1"
+  },
+  "author": "garychangcn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lsp27/koa2-formidableV3/issues"
+  },
+  "homepage": "https://github.com/lsp27/koa2-formidableV3#readme"
+}
