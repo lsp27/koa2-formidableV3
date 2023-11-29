@@ -1,24 +1,26 @@
-'use strict'
+const formidable = require('formidable')
 
-import { formidable } from 'formidable';
-
-export default function (opt) {
+module.exports = function formidableKoa(opt) {
     return async function (ctx, next) {
-        const form = formidable({})
-        for (const key in opt) {
-            form[key] = opt[key]
-        }
-        await new Promise((reslove, reject) => {
-            form.parse(ctx.req, (err, fields, files) => {
-                if (err) {
-                    reject(err)
-                } else {
-                    ctx.request.body = fields
-                    ctx.request.files = files
-                    reslove()
-                }
+        if (ctx.method.toLowerCase() === 'post') {
+            const form = formidable.formidable({})
+            for (const key in opt) {
+                form[key] = opt[key]
+            }
+            await new Promise((reslove, reject) => {
+                form.parse(ctx.req, (err, fields, files) => {
+                    if (err) {
+                        reject(err)
+                    } else {
+                        ctx.request.body = fields
+                        ctx.request.files = files
+                        reslove()
+                    }
+                })
             })
-        })
-        await next()
+            await next()
+        }else{
+            await next()
+        }
     }
 }

@@ -1,9 +1,8 @@
 {
-  "name": "koa2-formidable-v3",
+  "name": "koa2-formidable-upgrade",
   "version": "1.0.0",
   "description": "koa2 middleware for formidable",
   "main": "index.js",
-  "type": "module",
   "scripts": {},
   "repository": {
     "type": "git",
