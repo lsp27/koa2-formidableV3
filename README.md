@@ -1,13 +1,13 @@
 ## GET
 
 ```js
-npm install koa2-formidable --save
+npm install koa2-formidable-upgrade --save
 ```
 
 ## API
 
 ```js
-const formidable = require('koa2-formidable-upgrade') or import * as formidable from 'koa2-formidable-upgrade';
+const formidable = require('koa2-formidable-upgrade')
 const Koa = require('koa')
 const app = new Koa()
 app.use(formidable())
